@@ -1,0 +1,105 @@
+@import "reset.css";
+
+@font-face {
+  font-family: cursive;
+  font-weight: bold;
+  src: url(fonts)
+  format('truetype')
+}
+*{
+  box-sizing: border-box;
+  -webkit
+
+}
+
+body{
+  background: #000;
+  font-family: sans-serif;
+  font-weight: bold;
+  overflow: hidden;
+}
+main{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.box{
+width: 90vw;
+height: 30vh;
+font-size: 12vw;
+letter-spacing: 1vw;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.is-white{
+  background: white;
+  animation: shake 1.9s ease-in infinite;
+}
+.is-blue{
+  background: blue;
+  animation: shake 2s ease-out reverse infinite;
+}
+.is-red{
+  background: red;
+  animation: shake 1.5s ease-in-out alternate infinite;
+}
+
+body > p{
+  position: absolute;
+  color: #fff;
+  line-height: 140%;
+  font-size: 5vh;
+  animation: roun 4s ease-in infinite;
+  top: 0;
+  left: 0;
+}
+
+@keyframes shake {
+  0%{
+    transform: translateX(-5vw) rotate(-1deg);
+  }
+  30%{
+    transform: translateX(-2vw) rotate(1deg);
+  }
+  50%{
+    transform: translateX(5vw) rotate(0deg);
+  }
+  75%{
+    transform: translateX(1vw) rotate(1deg);
+  }
+  100%{
+    transform: translateX(-5vw) rotate(-1deg);
+  }
+}
+
+@keyframes roun {
+  0%{
+    opacity: 0;
+  }
+  10%{
+    opacity: 0.1;
+  }
+  15%{
+    opacity: 0;
+  }
+  57%{
+    opacity: 0;
+  }
+  60%{
+    opacity: 1;
+  }
+  61%{
+    opacity: 0;
+  }
+  80%{
+    opacity: 0.03;
+  }
+  100%{
+    opacity: 0;
+  }
+}
